@@ -9,12 +9,10 @@ export function AboutSection() {
         <div className="grid gap-8 md:grid-cols-2 items-center">
           <div className="space-y-4">
             <p className="text-muted-foreground">
-              I'm a passionate full-stack developer. I love
-              turning complex problems into simple, beautiful, and intuitive solutions.
+              {"I'm a passionate full-stack developer. I love turning complex problems into simple, beautiful, and intuitive solutions."}
             </p>
             <p className="text-muted-foreground">
-              When I'm not coding, you can find me exploring new technologies, contributing to open-source projects, or
-              sharing my knowledge through technical writing and mentoring.
+              {"When I'm not coding, you can find me exploring new technologies, contributing to open-source projects, or sharing my knowledge through technical writing and mentoring."}
             </p>
             <div className="flex flex-wrap gap-2">
               <Badge variant="secondary">Problem Solver</Badge>
