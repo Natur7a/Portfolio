@@ -4,7 +4,7 @@ import Link from "next/link"
 
 export function HeroSection() {
   return (
-    <section className="container py-24 md:py-32 mx-auto max-w-4xl flex flex-col items-center justify-center space-y-8">
+    <section className="container py-80 mx-auto max-w-4xl flex flex-col items-center justify-center space-y-8" data-aos="fade-right">
       <div className="flex flex-col items-center text-center space-y-8">
         <div className="space-y-4">
           <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl lg:text-7xl">

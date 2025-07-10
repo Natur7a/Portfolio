@@ -4,7 +4,7 @@ import Link from "next/link"
 
 export function ContactSection() {
   return (
-    <section id="contact" className="container py-24 bg-muted/50 mx-auto">
+    <section id="contact" className="container py-24 bg-muted/50 mx-auto" data-aos="fade-up">
       <div className="mx-auto max-w-2xl text-center">
         <h2 className="text-3xl font-bold tracking-tighter mb-8">
           {"Let's Work Together"}

@@ -4,7 +4,7 @@ import Link from "next/link"
 
 export function Footer() {
   return (
-    <footer className="border-t py-8">
+    <footer className="border-t py-8" data-aos="fade-right">
       <div className="container flex flex-col items-center justify-between gap-4 md:flex-row mx-auto max-w-4xl">
         <p className="text-sm text-muted-foreground">© 2025 Moses Handoyo. All rights reserved.</p>
         <div className="flex space-x-4">
