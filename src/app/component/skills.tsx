@@ -1,5 +1,5 @@
-import { Badge } from "../component/ui/Badge"
-import { Card, CardContent, CardHeader, CardTitle } from "../component/ui/card"
+import { Badge } from "../../../ui/Badge"
+import { Card, CardContent, CardHeader, CardTitle } from "../../../ui/card"
 import { Globe, Database, Smartphone, Code } from "lucide-react"
 
 const skillCategories = [

@@ -1,4 +1,4 @@
-import { Badge } from "../component/ui/Badge"
+import { Badge } from "../../../ui/Badge"
 import Image from "next/image"
 
 export function AboutSection() {
