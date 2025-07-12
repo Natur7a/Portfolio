@@ -1,5 +1,5 @@
 import { Button } from "../../../ui/Button"
-import { Github, Folder, Mail, Download } from "lucide-react"
+import { Folder, Download } from "lucide-react"
 import Link from "next/link"
 import Image from "next/image"
 
