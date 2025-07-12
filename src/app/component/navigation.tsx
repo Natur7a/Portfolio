@@ -4,20 +4,14 @@ import { Code, Folder, User, BadgeCheck, Mail } from "lucide-react"
 import { usePathname } from "next/navigation"
 import Link from "next/link"
 import Image from "next/image"
-import {
-  NavigationMenu,
-  NavigationMenuList,
-  NavigationMenuItem,
-  NavigationMenuLink,
-} from "../../../src/components/ui/navigation-menu"
 
 export function Navigation() {
   const pathName = usePathname()
 
   const navItems = [
     { href: "/Explore", label: "Explore", icon: User, shortcut: "E" },
-    { href: "#projects", label: "Works", icon: Folder, shortcut: "P" },
-    { href: "#skills", label: "Projects", icon: BadgeCheck, shortcut: "S" },
+    { href: "#projects", label: "Works", icon: Folder, shortcut: "W" },
+    { href: "#skills", label: "Projects", icon: BadgeCheck, shortcut: "P" },
     { href: "#contact", label: "Contact", icon: Mail, shortcut: "C" },
   ]
 
@@ -29,65 +23,63 @@ export function Navigation() {
           <Image
             src="/profile.jpg"
             alt="Profile"
-            width={80}
-            height={80}
+            width={50}
+            height={50}
             className="rounded-full object-cover aspect-square"
           />
           <div>
-            <h2 className="mt-4 font-semibold text-black">Moses Handoyo</h2>
+            <h2 className="font-semibold text-black text-lg">Moses Handoyo</h2>
             <p className="text-sm text-gray-500">Full-stack & ML Learner</p>
           </div>
         </div>
 
         {/* Navigation */}
         <div className="mb-6">
-          <p className="text-black font-semibold text-l mb-2">About Me</p>
-          <nav className="space-y-2 text-sm">
-            <NavigationMenu>
-              <NavigationMenuList className="flex flex-col gap-1 w-full">
-                {navItems.map((item) => {
-                  const isActive = pathName === item.href
-                  const classes = `flex flex-row items-center gap-2 px-3 py-2 rounded text-black w-full transition-colors ${
-                    isActive
-                      ? "bg-gray-200 font-bold cursor-default"
-                      : "hover:bg-gray-100"
-                  }`
+          <p className="text-black font-semibold text-lg mb-2">ABOUT ME</p>
+          <nav className="text-sm">
+            <ul className="flex flex-col space-y-2">
+              {navItems.map((item) => {
+                const isActive = pathName === item.href
+                const baseClasses =
+                  "w-full block flex items-center justify-between gap-2 px-3 py-2 rounded transition-colors"
+                const activeClasses =
+                  "border border-gray-300 bg-gray-100 font-bold text-black cursor-default"
+                const inactiveClasses = "text-gray-400 font-semibold hover:bg-gray-50"
 
-                  const Content = (
-                    <>
-                      <item.icon size={18} />
-                      <span className="flex-1">{item.label}</span>
-                      {item.shortcut && (
-                        <kbd className="ml-auto px-1 py-0.5 bg-gray-200 rounded text-xs">
-                          {item.shortcut}
-                        </kbd>
-                      )}
-                    </>
-                  )
-
-                  return (
-                    <NavigationMenuItem key={item.href}>
-                      {isActive ? (
-                        <div className={classes}>{Content}</div>
-                      ) : (
-                        <Link href={item.href} passHref legacyBehavior>
-                          <NavigationMenuLink className={classes}>
-                            {Content}
-                          </NavigationMenuLink>
-                        </Link>
-                      )}
-                    </NavigationMenuItem>
-                  )
-                })}
-              </NavigationMenuList>
-            </NavigationMenu>
+                return (
+                  <li key={item.href}>
+                    <Link
+                      href={item.href}
+                      className={`${baseClasses} ${
+                        isActive ? activeClasses : inactiveClasses
+                      }`}
+                    >
+                      <item.icon
+                        size={22}
+                        className={isActive ? "text-black" : "text-gray-400"}
+                      />
+                      <span className="flex-1 text-left">{item.label}</span>
+                      <kbd
+                        className={`px-2 py-1 bg-gray-100 border rounded text-xs font-semibold ${
+                          isActive
+                            ? "text-gray-600 border-gray-200"
+                            : "text-gray-400 border-gray-100"
+                        }`}
+                      >
+                        {item.shortcut}
+                      </kbd>
+                    </Link>
+                  </li>
+                )
+              })}
+            </ul>
           </nav>
         </div>
       </div>
 
       {/* Footer */}
-      <div className="flex items-center justify-center text-sm text-muted-foreground mt-10 text-black">
-        <Code className="mr-2 h-4 w-4 text-black" />
+      <div className="flex items-center justify-center text-sm text-black">
+        <Code className="mr-2 h-4 w-4" />
         Portfolio
       </div>
     </aside>
