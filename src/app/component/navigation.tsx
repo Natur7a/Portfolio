@@ -16,7 +16,7 @@ export function Navigation() {
   ]
 
   return (
-    <aside className="fixed top-0 left-0 h-screen w-64 bg-gray-300 border-r p-6 flex flex-col justify-between shadow-sm z-50">
+    <aside className="fixed top-0 left-0 h-screen w-64 bg-gray-200 border-r p-6 flex flex-col justify-between shadow-sm z-50">
       <div>
         {/* Profile Info */}
         <div className="flex items-center mb-10 gap-4">
