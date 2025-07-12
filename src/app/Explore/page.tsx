@@ -1,4 +1,3 @@
-import { Navigation } from "../component/navigation"
 import { HeroSection } from "./hero"
 export default function Portfolio() {
   return (
