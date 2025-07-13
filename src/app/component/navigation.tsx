@@ -1,6 +1,6 @@
 "use client"
 
-import { Code, Folder, User, BadgeCheck, Mail } from "lucide-react"
+import { Code, Folder, User, GraduationCap, Mail } from "lucide-react"
 import { usePathname } from "next/navigation"
 import Link from "next/link"
 import Image from "next/image"
@@ -9,10 +9,10 @@ export function Navigation() {
   const pathName = usePathname()
 
   const navItems = [
-    { href: "/Explore", label: "Explore", icon: User, shortcut: "E" },
-    { href: "#projects", label: "Works", icon: Folder, shortcut: "W" },
-    { href: "#skills", label: "Projects", icon: BadgeCheck, shortcut: "P" },
-    { href: "#contact", label: "Contact", icon: Mail, shortcut: "C" },
+    { href: "/Explore", label: "Explore", icon: User, shortcut: "W" },
+    { href: "/Experience", label: "Works", icon: Folder, shortcut: "A" },
+    { href: "#skills", label: "Education", icon: GraduationCap, shortcut: "S" },
+    { href: "#contact", label: "Contact", icon: Mail, shortcut: "D" },
   ]
 
   return (
