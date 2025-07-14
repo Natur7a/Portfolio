@@ -1,8 +1,28 @@
-import React from "react";
+'use client'
+
+import React, { useEffect } from "react";
 import Details from "./Details";
 
 export default function Portfolio() {
   return (
+        useEffect(() => {
+          const handleKeyDown = (event: KeyboardEvent) => {
+            if (event.key === "a") {
+              window.location.href = "/Experience";
+            } else if (event.key === "s") {
+              window.location.href = "/Education";
+            } else if (event.key === "d") {
+              window.location.href = "#contact";
+            } else if (event.key === "w") {
+              window.location.href = "/Explore";
+            }
+          }
+          
+          window.addEventListener('keydown', handleKeyDown);
+          return () => {
+          window.removeEventListener('keydown', handleKeyDown);
+        };
+        }, []),
     <div className="min-h-screen bg-black" data-aos="fade-up">
         <section className="py-24 flex items-center justify-center" data-aos="fade-right">
             <div className="max-w-4xl w-full px-6 flex flex-col items-start space-y-8">
