@@ -1,6 +1,6 @@
 "use client"
 
-import { Code, Folder, User, GraduationCap, Mail } from "lucide-react"
+import { Code, Folder, User, GraduationCap, Mail, Github, Linkedin, Instagram } from "lucide-react"
 import { usePathname } from "next/navigation"
 import Link from "next/link"
 import Image from "next/image"
@@ -11,8 +11,13 @@ export function Navigation() {
   const navItems = [
     { href: "/Explore", label: "Explore", icon: User, shortcut: "W" },
     { href: "/Experience", label: "Works", icon: Folder, shortcut: "A" },
-    { href: "#skills", label: "Education", icon: GraduationCap, shortcut: "S" },
-    { href: "#contact", label: "Contact", icon: Mail, shortcut: "D" },
+    { href: "/Education", label: "Education", icon: GraduationCap, shortcut: "S" },  
+  ]
+
+  const socialLinks = [
+    { href: "https://github.com/Natur7a", label: "GitHub", icon: Github },
+    { href: "https://www.linkedin.com/in/moses-handoyo-156046229", label: "LinkedIn", icon: Linkedin },
+    { href: "https://www.instagram.com/_moses.h_/", label: "Instagram", icon: Instagram },
   ]
 
   return (
@@ -75,12 +80,33 @@ export function Navigation() {
             </ul>
           </nav>
         </div>
+        
+        <div className="mb-6">
+          <p className="text-black font-semibold text-lg mb-2">CONTACTS</p>
+          <nav className="text-sm">
+            <ul className="flex flex-col space-y-2">
+              {socialLinks.map((item) => (
+                <li key={item.label}>
+                  <Link
+                    href={item.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-full block flex items-center gap-2 px-3 py-2 rounded transition-colors text-gray-500 hover:text-gray-700 font-semibold hover:bg-gray-50"
+                  >
+                    <item.icon size={22} />
+                    <span className="flex-1 text-left">{item.label}</span>
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </nav>
+        </div>
       </div>
 
       {/* Footer */}
       <div className="flex items-center justify-center text-sm text-black">
         <Code className="mr-2 h-4 w-4" />
-        Portfolio
+        <span>Last updated: 2025-07-14</span>
       </div>
     </aside>
   )
