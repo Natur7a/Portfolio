@@ -1,4 +1,3 @@
-import Image from 'next/image';
 import { GraduationCap } from 'lucide-react';
 import React from 'react';
 

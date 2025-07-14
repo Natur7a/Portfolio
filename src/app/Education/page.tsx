@@ -9,11 +9,10 @@ export default function Portfolio() {
                 <div className="space-y-4 w-full">
                     <h1 className="text-7xl font-bold text-white">Education</h1>
                     <p className="text-lg text-gray-300">
-                        "Education is learning what you didn't even know you didn't know." —Daniel J. Boorstin
+                        &ldquo;Education is learning what you didn&apos;t even know you didn&apos;t know.&rdquo; —Daniel J. Boorstin
                     </p>
                 </div>
                 <Details />
-
             </div>
         </section>
     </div>
