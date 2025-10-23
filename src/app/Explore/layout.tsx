@@ -25,14 +25,14 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <main className="flex-1 md:ml-64 p-6">
-        <body
-          className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-        >
-          <AOSInit />
+      <body
+        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+      >
+        <AOSInit />
+        <main className="flex-1 md:ml-64 p-6">
           {children}
-        </body>
-      </main>
+        </main>
+      </body>
     </html>
   );
 }
