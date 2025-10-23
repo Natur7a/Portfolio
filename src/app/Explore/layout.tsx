@@ -25,12 +25,14 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        <AOSInit />
-        {children}
-      </body>
+      <main className="flex-1 md:ml-64 p-6">
+        <body
+          className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        >
+          <AOSInit />
+          {children}
+        </body>
+      </main>
     </html>
   );
 }
