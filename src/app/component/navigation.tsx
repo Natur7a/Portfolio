@@ -102,12 +102,6 @@ export function Navigation() {
           </nav>
         </div>
       </div>
-
-      {/* Footer */}
-      <div className="flex items-center justify-center text-sm text-black">
-        <Code className="mr-2 h-4 w-4" />
-        <span>Last updated: 2025-07-14</span>
-      </div>
     </aside>
   )
 }
