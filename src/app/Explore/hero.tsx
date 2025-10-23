@@ -5,7 +5,7 @@ import Image from "next/image"
 
 export function HeroSection() {
   return (
-    <section className="py-24 flex items-center justify-center" data-aos="fade-right">
+    <section className="py-24 flex items-center justify-center">
       <div className="max-w-4xl w-full px-6 flex flex-col items-start text-center space-y-8">
         <div className="space-y-4">
           <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight text-left">
@@ -15,7 +15,7 @@ export function HeroSection() {
             {"I'm a Software Engineer"}
           </h2>
           <p className="mx-auto text-lg text-muted-foreground md:text-l text-left">
-            First Year Computer Science Student at BINUS University. Passionate about Full-stack Development and Machine Learning.
+            Second Year Computer Science Student at BINUS University. Passionate about Full-stack Development and Machine Learning.
           </p>
         </div>
         <div className="flex flex-col gap-4 sm:flex-row">
@@ -26,7 +26,7 @@ export function HeroSection() {
             </Link>
           </Button>
           <Button size="lg" className="border" asChild>
-            <Link href="/Moses Handoyo (1).pdf" target="_blank" rel="noopener">
+            <Link href="/Moses Handoyo CV.pdf" target="_blank" rel="noopener">
               <Download className="mr-2 h-4 w-4" />
               Download Resume
             </Link>
