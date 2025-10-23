@@ -21,8 +21,8 @@ export function Navigation() {
   ]
 
   return (
-  <aside className="fixed top-0 left-0 h-screen w-64 bg-[#1a1a1a] border-r border-gray-700 p-6 flex flex-col justify-between shadow-sm z-50">
-      <div>
+<aside className="fixed top-0 left-0 h-screen w-64 bg-[#1a1a1a] border-r border-gray-700 p-6 flex-col justify-between shadow-sm z-50 hidden md:flex">      
+  <div>
         {/* Profile Info */}
         <div className="flex items-center mb-10 gap-4">
           <Image
@@ -33,8 +33,8 @@ export function Navigation() {
             className="rounded-full object-cover aspect-square"
           />
           <div>
-            <h2 className="font-semibold text-black text-lg">Moses Handoyo</h2>
-            <p className="text-sm text-gray-500">Full-stack & ML Learner</p>
+            <h2 className="font-semibold text-gray-100 text-lg">Moses Handoyo</h2>
+            <p className="text-sm text-gray-300">Full-stack & ML Learner</p>
           </div>
         </div>
 
@@ -82,7 +82,7 @@ export function Navigation() {
         </div>
         
         <div className="mb-6">
-          <p className="text-black font-semibold text-lg mb-2">CONTACTS</p>
+          <p className="text-gray-100 font-semibold text-lg mb-2">CONTACTS</p>
           <nav className="text-sm">
             <ul className="flex flex-col space-y-2">
               {socialLinks.map((item) => (
