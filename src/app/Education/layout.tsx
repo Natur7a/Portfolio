@@ -9,7 +9,7 @@ export default function Layout({ children }: LayoutProps) {
   return (
     <html lang="en">
       <body>
-        <main>
+        <main className="flex-1 md:ml-64 p-6">
           {children}
         </main>
         <AOSInit />

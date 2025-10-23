@@ -40,7 +40,7 @@ export function Navigation() {
 
         {/* Navigation */}
         <div className="mb-6">
-          <p className="text-black font-semibold text-lg mb-2">ABOUT ME</p>
+          <p className="text-gray-100 font-semibold text-lg mb-2">ABOUT ME</p>
           <nav className="text-sm">
             <ul className="flex flex-col space-y-2">
               {navItems.map((item) => {
