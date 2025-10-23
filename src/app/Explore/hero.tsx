@@ -26,7 +26,7 @@ export function HeroSection() {
             </Link>
           </Button>
           <Button size="lg" className="border" asChild>
-            <Link href="/resume.pdf" target="_blank" rel="noopener">
+            <Link href="/Moses Handoyo (1).pdf" target="_blank" rel="noopener">
               <Download className="mr-2 h-4 w-4" />
               Download Resume
             </Link>
