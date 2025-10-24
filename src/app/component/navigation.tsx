@@ -1,6 +1,6 @@
 "use client"
 
-import { Code, Folder, User, GraduationCap, Github, Linkedin, Instagram } from "lucide-react"
+import { Folder, User, GraduationCap, Github, Linkedin, Instagram } from "lucide-react"
 import { usePathname } from "next/navigation"
 import Link from "next/link"
 import Image from "next/image"
