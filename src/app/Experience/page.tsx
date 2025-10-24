@@ -24,7 +24,7 @@ export default function Portfolio() {
   }, []);
 
   return (
-    <div className="min-h-screen bg-black">
+    <div className="min-h-screen bg-background">
       <section className="py-24 flex items-center justify-center">
         <div className="max-w-4xl w-full px-6 flex flex-col items-start space-y-8">
           <div className="space-y-4 w-full">

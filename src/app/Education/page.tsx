@@ -23,7 +23,7 @@ export default function Portfolio() {
             window.removeEventListener('keydown', handleKeyDown);
         };
         }, []),
-    <div className="min-h-screen bg-black" data-aos="fade-up">
+    <div className="min-h-screen bg-background" data-aos="fade-up">
         <section className="py-24 flex items-center justify-center">
             <div className="max-w-4xl w-full px-6 flex flex-col items-start space-y-8">
                 <div className="space-y-4 w-full">
