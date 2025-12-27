@@ -11,6 +11,7 @@ function Details() {
             work: [
                 "Developed a cloud-based notification and email function for late and absent attendance within the BinusSchool system.",
                 "Developed a blocking system in the BinusSchool system for an easier way moving to toddle.",
+                "Designed and implemented score entry workflows with clear status tracking (Submitted, Unsubmitted, Upcoming, Pending, In Progress), improving transparency for academic staff.",
                 "Participated in code reviews and contributed to team knowledge sharing."
             ],
             techStack: [
@@ -18,6 +19,7 @@ function Details() {
                 "LinQ", 
                 "SQL", 
                 "C#", 
+                ".NET",
                 "HTML5/JavaScript"
             ],
         },
