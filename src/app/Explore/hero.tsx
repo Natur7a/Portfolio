@@ -5,13 +5,13 @@ import Image from "next/image"
 
 export function HeroSection() {
   return (
-    <section className="py-24 flex items-center justify-center">
-      <div className="max-w-4xl w-full px-6 flex flex-col items-start text-center space-y-8">
+    <section className="py-8 md:py-24 flex items-center justify-center">
+      <div className="max-w-4xl w-full sm:px-6 flex flex-col items-start text-center space-y-8">
         <div className="space-y-4">
           <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight text-left">
             {"Hi, I'm"} <span className="text-primary">Moses Handoyo</span>
           </h1>
-          <h2 className="mt-5 text-4xl font-bold tracking-tighter sm:text-5xl md:text-5xl lg:text-4xl text-left">
+          <h2 className="mt-5 text-3xl font-bold tracking-tighter sm:text-5xl md:text-5xl lg:text-4xl text-left">
             {"I'm a Junior Software Engineer"}
           </h2>
           <p className="mx-auto text-lg text-muted-foreground md:text-l text-left">
@@ -21,7 +21,7 @@ export function HeroSection() {
             Computer Science student at BINUS University (GPA 3.75), experienced in Agile delivery, SQL, and full-stack development with JavaScript, React, and Next.js. Based in Jakarta, Indonesia and open to remote roles.
           </p>
         </div>
-        <div className="flex flex-col gap-4 sm:flex-row">
+        <div className="flex flex-col gap-4 w-full sm:w-auto sm:flex-row">
           <Button size="lg" className="border" asChild>
             <Link href="/Experience">
               <Folder className="mr-2 h-4 w-4" />
@@ -35,15 +35,15 @@ export function HeroSection() {
             </Link>
           </Button>
         </div>
-          <div className="w-full border rounded-md p-6 bg-gray-900/30">
+          <div className="w-full border rounded-md p-4 sm:p-6 bg-gray-100 dark:bg-gray-900/30">
           <h2 className="text-2xl font-semibold mb-6 text-left">Work Experience</h2>
-          <div className="flex items-center gap-6">
+          <div className="flex items-center gap-4 sm:gap-6">
             <Image
               src="/it_div.jpeg"
               alt="Binus IT Division Logo"
               width={100}
               height={100}
-              className="object-cover rounded"
+              className="object-cover rounded w-16 h-16 sm:w-[100px] sm:h-[100px]"
             />
             <div className="space-y-1 text-left">
               <p className="text-lg font-bold">Junior Software Engineer</p>

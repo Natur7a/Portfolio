@@ -25,11 +25,11 @@ export default function Portfolio() {
 
   return (
     <div className="min-h-screen bg-background" data-aos="fade-up">
-        <section className="py-24 flex items-center justify-center">
-            <div className="max-w-4xl w-full px-6 flex flex-col items-start space-y-8">
+        <section className="py-8 md:py-24 flex items-center justify-center">
+            <div className="max-w-4xl w-full sm:px-6 flex flex-col items-start space-y-8">
                 <div className="space-y-4 w-full">
-                    <h1 className="text-7xl font-bold text-white">Education</h1>
-                    <p className="text-lg text-gray-300">
+                    <h1 className="text-5xl sm:text-6xl md:text-7xl font-bold text-neutral-900 dark:text-white">Education</h1>
+                    <p className="text-base sm:text-lg text-gray-600 dark:text-gray-300">
                         &ldquo;Education is learning what you didn&apos;t even know you didn&apos;t know.&rdquo; -Daniel J. Boorstin
                     </p>
                 </div>

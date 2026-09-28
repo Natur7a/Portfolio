@@ -71,11 +71,11 @@ function Details() {
     ]
 
     return (
-        <div className="mt-10">
+        <div className="mt-6 sm:mt-10 w-full">
             {experiences.map((experience, index) => (
                 <div key={index}>
-                    <div className="w-full h-[1px] bg-neutral-200 mb-6" />
-                    <div className="flex flex-col lg:flex-row p-5 w-full lg:space-x-4">
+                    <div className="w-full h-[1px] bg-neutral-300 dark:bg-neutral-200 mb-6" />
+                    <div className="flex flex-col lg:flex-row py-5 sm:p-5 w-full lg:space-x-4">
                         <div className="flex w-full lg:w-2/5 flex-col mb-5 lg:mb-0">
                             {/* Company Logo and Name */}
                             <div className="flex flex-row w-full items-center pr-5">
@@ -85,7 +85,7 @@ function Details() {
                                         alt={experience.company}
                                         width={80}
                                         height={80}
-                                        className="rounded-lg"
+                                        className="rounded-lg w-14 h-14 sm:w-20 sm:h-20"
                                     />
                                 </div>
                                 <p className="font-semibold ml-5 flex-grow">
@@ -93,10 +93,10 @@ function Details() {
                                 </p>
                             </div>
                             {/* Duration and Location */}
-                            <div className="text-neutral-300 text-sm mt-2">
+                            <div className="text-neutral-600 dark:text-neutral-300 text-sm mt-2">
                                 {experience.duration}
                             </div>
-                            <div className="text-neutral-300 text-sm mt-1">
+                            <div className="text-neutral-600 dark:text-neutral-300 text-sm mt-1">
                                 {experience.title}
                             </div>
                         </div>
@@ -117,7 +117,7 @@ function Details() {
                                     {experience.techStack.map((tech, idx) => (
                                         <span
                                             key={idx}
-                                            className="px-3 py-1 text-sm bg-neutral-100 text-neutral-700 rounded-full"
+                                            className="px-3 py-1 text-sm bg-neutral-200 dark:bg-neutral-100 text-neutral-700 rounded-full"
                                         >
                                             {tech}
                                         </span>
@@ -131,21 +131,21 @@ function Details() {
 
             {projects.map((project, index) => (
                 <div key={index}>
-                    <div className="w-full h-[1px] bg-neutral-200 mb-6" />
-                    <div className="flex flex-col lg:flex-row p-5 w-full lg:space-x-4">
+                    <div className="w-full h-[1px] bg-neutral-300 dark:bg-neutral-200 mb-6" />
+                    <div className="flex flex-col lg:flex-row py-5 sm:p-5 w-full lg:space-x-4">
                         <div className="flex w-full lg:w-2/5 flex-col mb-5 lg:mb-0">
                             {/* Project Name and Link */}
                             <p className="font-semibold">
                                 {project.title}
                             </p>
-                            <div className="text-neutral-300 text-sm mt-2">
+                            <div className="text-neutral-600 dark:text-neutral-300 text-sm mt-2">
                                 Project
                             </div>
                             <a
                                 href={project.link}
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="text-neutral-300 text-sm mt-1 hover:underline"
+                                className="text-neutral-600 dark:text-neutral-300 text-sm mt-1 hover:underline"
                             >
                                 View on GitHub
                             </a>
@@ -168,7 +168,7 @@ function Details() {
                                     {project.techStack.map((tech, idx) => (
                                         <span
                                             key={idx}
-                                            className="px-3 py-1 text-sm bg-neutral-100 text-neutral-700 rounded-full"
+                                            className="px-3 py-1 text-sm bg-neutral-200 dark:bg-neutral-100 text-neutral-700 rounded-full"
                                         >
                                             {tech}
                                         </span>
