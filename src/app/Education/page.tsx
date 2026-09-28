@@ -4,25 +4,26 @@ import React, { useEffect } from "react";
 import Details from "./Details";
 
 export default function Portfolio() {
+  useEffect(() => {
+    const handleKeyDown = (event: KeyboardEvent) => {
+      if (event.key === "a") {
+        window.location.href = "/Experience";
+      } else if (event.key === "s") {
+        window.location.href = "/Education";
+      } else if (event.key === "d") {
+        window.location.href = "#contact";
+      } else if (event.key === "w") {
+        window.location.href = "/Explore";
+      }
+    }
+
+    window.addEventListener('keydown', handleKeyDown);
+    return () => {
+      window.removeEventListener('keydown', handleKeyDown);
+    };
+  }, []);
+
   return (
-        useEffect(() => {
-            const handleKeyDown = (event: KeyboardEvent) => {
-            if (event.key === "a") {
-                window.location.href = "/Experience";
-            } else if (event.key === "s") {
-                window.location.href = "/Education";
-            } else if (event.key === "d") {
-                window.location.href = "#contact";
-            } else if (event.key === "w") {
-                window.location.href = "/Explore";
-            }
-            }
-            
-            window.addEventListener('keydown', handleKeyDown);
-            return () => {
-            window.removeEventListener('keydown', handleKeyDown);
-        };
-        }, []),
     <div className="min-h-screen bg-background" data-aos="fade-up">
         <section className="py-24 flex items-center justify-center">
             <div className="max-w-4xl w-full px-6 flex flex-col items-start space-y-8">

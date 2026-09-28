@@ -12,15 +12,18 @@ export function HeroSection() {
             {"Hi, I'm"} <span className="text-primary">Moses Handoyo</span>
           </h1>
           <h2 className="mt-5 text-4xl font-bold tracking-tighter sm:text-5xl md:text-5xl lg:text-4xl text-left">
-            {"I'm a Software Engineer"}
+            {"I'm a Junior Software Engineer"}
           </h2>
           <p className="mx-auto text-lg text-muted-foreground md:text-l text-left">
-            Second Year Computer Science Student at BINUS University. Passionate about Full-stack Development and Machine Learning.
+            1.5 years of production experience building and maintaining .NET and C# web applications that support daily school operations at BINUS. Cut a critical data process from over 30 minutes to under 10 seconds through query optimization and efficient data structures.
+          </p>
+          <p className="mx-auto text-lg text-muted-foreground md:text-l text-left">
+            Computer Science student at BINUS University (GPA 3.75), experienced in Agile delivery, SQL, and full-stack development with JavaScript, React, and Next.js. Based in Jakarta, Indonesia and open to remote roles.
           </p>
         </div>
         <div className="flex flex-col gap-4 sm:flex-row">
           <Button size="lg" className="border" asChild>
-            <Link href="/projects">
+            <Link href="/Experience">
               <Folder className="mr-2 h-4 w-4" />
               View My Work
             </Link>
@@ -43,9 +46,12 @@ export function HeroSection() {
               className="object-cover rounded"
             />
             <div className="space-y-1 text-left">
-              <p className="text-lg font-bold">Associate Member Programmer</p>
+              <p className="text-lg font-bold">Junior Software Engineer</p>
               <p className="text-sm text-muted-foreground">
-                Binus IT Division
+                Bina Nusantara IT Division (Binus School Team)
+              </p>
+              <p className="text-sm text-muted-foreground">
+                March 2026 - Present
               </p>
             </div>
           </div>

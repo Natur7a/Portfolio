@@ -3,8 +3,8 @@ import { ReactNode } from "react"
 import Navigation from "./component/navigation"
 
 export const metadata = {
-  title: "My Portfolio",
-  description: "Moses Handoyo’s portfolio",
+  title: "Moses Handoyo | Junior Software Engineer",
+  description: "Moses Handoyo’s portfolio — Junior Software Engineer specializing in .NET, C#, and full-stack development",
 }
 
 export default function RootLayout({ children }: { children: ReactNode }) {

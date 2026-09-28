@@ -16,7 +16,7 @@ export function Navigation() {
 
   const socialLinks = [
     { href: "https://github.com/Natur7a", label: "GitHub", icon: Github },
-    { href: "https://www.linkedin.com/in/moses-handoyo-156046229", label: "LinkedIn", icon: Linkedin },
+    { href: "https://www.linkedin.com/in/moses-handoyo", label: "LinkedIn", icon: Linkedin },
     { href: "https://www.instagram.com/_moses.h_/", label: "Instagram", icon: Instagram },
   ]
 
@@ -34,7 +34,7 @@ export function Navigation() {
           />
           <div>
             <h2 className="font-semibold text-gray-100 text-lg">Moses Handoyo</h2>
-            <p className="text-sm text-gray-300">Full-stack & ML Learner</p>
+            <p className="text-sm text-gray-300">Junior Software Engineer</p>
           </div>
         </div>
 

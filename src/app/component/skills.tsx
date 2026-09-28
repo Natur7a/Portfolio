@@ -1,27 +1,27 @@
 import { Badge } from "../../../ui/Badge"
 import { Card, CardContent, CardHeader, CardTitle } from "../../../ui/card"
-import { Globe, Database, Smartphone, Code } from "lucide-react"
+import { Globe, Database, Workflow, Code } from "lucide-react"
 
 const skillCategories = [
   {
-    title: "Frontend",
-    icon: Globe,
-    skills: ["React", "Next.js"],
-  },
-  {
-    title: "Backend",
-    icon: Database,
-    skills: ["Node.js", "LinQ"],
-  },
-  {
-    title: "Mobile",
-    icon: Smartphone,
-    skills: ["React Native", "iOS", "Android"],
-  },
-  {
-    title: "Tools",
+    title: "Languages",
     icon: Code,
-    skills: ["Git", "Vercel", "Figma"],
+    skills: ["C#", "JavaScript", "TypeScript", "SQL", "C", "C++", "HTML5", "CSS3"],
+  },
+  {
+    title: "Frameworks",
+    icon: Globe,
+    skills: [".NET", "ASP.NET Core", "Razor Pages", "React", "Next.js", "Node.js"],
+  },
+  {
+    title: "Libraries & Tools",
+    icon: Database,
+    skills: ["LINQ", "Bootstrap", "Tailwind CSS", "shadcn/ui", "Git", "Azure DevOps"],
+  },
+  {
+    title: "Practices",
+    icon: Workflow,
+    skills: ["Agile", "RESTful APIs", "Microservices", "Performance Optimization", "Code Review"],
   },
 ]
 

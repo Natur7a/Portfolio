@@ -21,7 +21,7 @@ export function ContactSection() {
           </Button>
           <Button variant="outline" size="lg" asChild>
             <a
-              href="https://www.linkedin.com/in/moses-handoyo-156046229"
+              href="https://www.linkedin.com/in/moses-handoyo"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center"

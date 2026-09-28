@@ -5,11 +5,11 @@ function Details() {
     const Study = [
         {
             University: "Bina Nusantara University",
-            degree: "Bachelor of Computer Science",
-            duration: "August 2024 - August 2028 (Expected)",
-            GPA: "3.77/4.00",
+            degree: "Bachelor of Engineering in Computer Science (Global Class)",
+            duration: "2024 - 2028 (Expected)",
+            GPA: "3.75/4.00",
             imageUrl: "/binus_logo.png",
-            description: "Currently pursuing a Bachelor's degree in Computer Science with a focus on full-stack development and machine learning.",
+            description: "Currently pursuing a Bachelor's degree in Computer Science while working as a Junior Software Engineer, with a focus on full-stack development and computer vision.",
         },
         
     ]
