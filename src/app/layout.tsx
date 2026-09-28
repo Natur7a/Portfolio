@@ -3,6 +3,7 @@ import { ReactNode } from "react"
 import { Geist, Geist_Mono } from "next/font/google"
 import Navigation from "./component/navigation"
 import AOSInit from "./component/AOSinit"
+import KeyboardShortcuts from "./component/keyboardShortcuts"
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -35,6 +36,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
       </head>
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
         <AOSInit />
+        <KeyboardShortcuts />
         <div className="flex min-h-screen">
           {/* Sidebar on desktop, top bar + slide-out drawer on mobile */}
           <Navigation />

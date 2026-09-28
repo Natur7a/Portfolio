@@ -1,11 +1,12 @@
 "use client"
 
-import { Folder, User, GraduationCap, Github, Linkedin, Instagram, Menu, X } from "lucide-react"
+import { Github, Linkedin, Instagram, Menu, X, ArrowUpRight } from "lucide-react"
 import { usePathname } from "next/navigation"
 import { useEffect, useState } from "react"
 import Link from "next/link"
 import Image from "next/image"
 import ThemeToggle from "./themeToggle"
+import { navItems } from "./navConfig"
 
 export function Navigation() {
   const pathName = usePathname()
@@ -21,40 +22,36 @@ export function Navigation() {
     return () => window.removeEventListener("keydown", handleKeyDown)
   }, [isOpen])
 
-  const navItems = [
-    { href: "/Explore", label: "Explore", icon: User, shortcut: "W" },
-    { href: "/Experience", label: "Works", icon: Folder, shortcut: "A" },
-    { href: "/Education", label: "Education", icon: GraduationCap, shortcut: "S" },
-  ]
-
   const socialLinks = [
     { href: "https://github.com/Natur7a", label: "GitHub", icon: Github },
     { href: "https://www.linkedin.com/in/moses-handoyo", label: "LinkedIn", icon: Linkedin },
     { href: "https://www.instagram.com/_moses.h_/", label: "Instagram", icon: Instagram },
   ]
 
+  const sectionLabel = "font-mono text-[11px] uppercase tracking-[0.2em] text-muted-foreground mb-3 px-3"
+
   return (
     <>
       {/* Mobile top bar */}
-      <header className="fixed top-0 inset-x-0 h-14 z-40 flex items-center justify-between px-4 bg-gray-50/90 dark:bg-[#1a1a1a]/90 backdrop-blur border-b border-gray-200 dark:border-gray-700 md:hidden">
+      <header className="fixed top-0 inset-x-0 h-14 z-40 flex items-center justify-between px-4 bg-background/80 backdrop-blur-md border-b border-border md:hidden">
         <button
           type="button"
           onClick={() => setIsOpen(true)}
           aria-label="Open navigation menu"
           aria-expanded={isOpen}
-          className="flex items-center justify-center rounded p-2 transition-colors text-gray-600 hover:bg-gray-200 dark:text-gray-300 dark:hover:bg-gray-800"
+          className="flex items-center justify-center rounded-full p-2 transition-colors text-muted-foreground hover:text-foreground hover:bg-foreground/5"
         >
-          <Menu size={22} />
+          <Menu size={20} />
         </button>
         <Link href="/Explore" className="flex items-center gap-2">
           <Image
             src="/profile.jpg"
             alt="Profile"
-            width={32}
-            height={32}
-            className="rounded-full object-cover aspect-square"
+            width={28}
+            height={28}
+            className="rounded-full object-cover aspect-square ring-1 ring-border"
           />
-          <span className="font-semibold text-gray-900 dark:text-gray-100">Moses Handoyo</span>
+          <span className="font-semibold tracking-tight">Moses Handoyo</span>
         </Link>
         <ThemeToggle />
       </header>
@@ -62,49 +59,54 @@ export function Navigation() {
       {/* Backdrop behind the mobile drawer */}
       {isOpen && (
         <div
-          className="fixed inset-0 z-40 bg-black/50 md:hidden"
+          className="fixed inset-0 z-40 bg-black/40 backdrop-blur-sm md:hidden"
           onClick={() => setIsOpen(false)}
           aria-hidden="true"
         />
       )}
 
-<aside className={`fixed top-0 left-0 h-screen w-64 max-w-[85vw] overflow-y-auto bg-gray-50 dark:bg-[#1a1a1a] border-r border-gray-200 dark:border-gray-700 p-6 flex flex-col justify-between shadow-sm z-50 transition-transform duration-300 md:translate-x-0 ${isOpen ? "translate-x-0" : "-translate-x-full"}`}>
+<aside className={`fixed top-0 left-0 h-screen w-64 max-w-[85vw] overflow-y-auto bg-card border-r border-border p-5 flex flex-col justify-between z-50 transition-transform duration-300 ease-out md:translate-x-0 ${isOpen ? "translate-x-0" : "-translate-x-full"}`}>
   <div>
         {/* Profile Info */}
-        <div className="flex items-center mb-10 gap-4">
-          <Image
-            src="/profile.jpg"
-            alt="Profile"
-            width={50}
-            height={50}
-            className="rounded-full object-cover aspect-square"
-          />
-          <div className="flex-1">
-            <h2 className="font-semibold text-gray-900 dark:text-gray-100 text-lg">Moses Handoyo</h2>
-            <p className="text-sm text-gray-600 dark:text-gray-300">Junior Software Engineer</p>
+        <div className="flex items-center mb-10 gap-3 px-1">
+          <div className="relative flex-shrink-0">
+            <Image
+              src="/profile.jpg"
+              alt="Profile"
+              width={44}
+              height={44}
+              className="rounded-full object-cover aspect-square ring-1 ring-border"
+            />
+            {/* Available indicator */}
+            <span className="absolute bottom-0 right-0 h-3 w-3 rounded-full bg-emerald-500 ring-2 ring-card" />
+          </div>
+          <div className="flex-1 min-w-0">
+            <h2 className="font-semibold tracking-tight">Moses Handoyo</h2>
+            <p className="text-xs text-muted-foreground">Junior Software Engineer</p>
           </div>
           <button
             type="button"
             onClick={() => setIsOpen(false)}
             aria-label="Close navigation menu"
-            className="self-start rounded p-1 transition-colors text-gray-600 hover:bg-gray-200 dark:text-gray-300 dark:hover:bg-gray-800 md:hidden"
+            className="self-start rounded-full p-1 transition-colors text-muted-foreground hover:text-foreground hover:bg-foreground/5 md:hidden"
           >
-            <X size={20} />
+            <X size={18} />
           </button>
         </div>
 
         {/* Navigation */}
-        <div className="mb-6">
-          <p className="text-gray-900 dark:text-gray-100 font-semibold text-lg mb-2">ABOUT ME</p>
+        <div className="mb-8">
+          <p className={sectionLabel}>About Me</p>
           <nav className="text-sm">
-            <ul className="flex flex-col space-y-2">
+            <ul className="flex flex-col space-y-1">
               {navItems.map((item) => {
-                const isActive = pathName === item.href
+                // Nested routes (e.g. a single article) keep their section highlighted
+                const isActive = pathName === item.href || pathName.startsWith(`${item.href}/`)
                 const baseClasses =
-                  "w-full block flex items-center justify-between gap-2 px-3 py-2 rounded transition-colors"
+                  "w-full flex items-center justify-between gap-3 px-3 py-2 rounded-lg transition-colors"
                 const activeClasses =
-                  "border border-gray-300 bg-white dark:bg-gray-100 font-bold text-black cursor-default"
-                const inactiveClasses = "text-gray-600 dark:text-gray-400 font-semibold hover:bg-gray-200 dark:hover:bg-gray-50"
+                  "bg-foreground text-background font-semibold shadow-sm"
+                const inactiveClasses = "text-muted-foreground font-medium hover:text-foreground hover:bg-foreground/5"
 
                 return (
                   <li key={item.href}>
@@ -115,17 +117,14 @@ export function Navigation() {
                         isActive ? activeClasses : inactiveClasses
                       }`}
                     >
-                      <item.icon
-                        size={22}
-                        className={isActive ? "text-black" : "text-gray-600 dark:text-gray-400"}
-                      />
+                      <item.icon size={18} />
                       <span className="flex-1 text-left">{item.label}</span>
                       {/* Keyboard shortcuts only make sense on desktop */}
                       <kbd
-                        className={`hidden md:inline-block px-2 py-1 bg-gray-100 border rounded text-xs font-semibold ${
+                        className={`hidden md:inline-flex h-5 min-w-5 items-center justify-center rounded border px-1 font-mono text-[10px] ${
                           isActive
-                            ? "text-gray-600 border-gray-200"
-                            : "text-gray-400 border-gray-200 dark:border-gray-100"
+                            ? "border-background/30 text-background/70"
+                            : "border-border text-muted-foreground"
                         }`}
                       >
                         {item.shortcut}
@@ -139,19 +138,20 @@ export function Navigation() {
         </div>
 
         <div className="mb-6">
-          <p className="text-gray-900 dark:text-gray-100 font-semibold text-lg mb-2">CONTACTS</p>
+          <p className={sectionLabel}>Contacts</p>
           <nav className="text-sm">
-            <ul className="flex flex-col space-y-2">
+            <ul className="flex flex-col space-y-1">
               {socialLinks.map((item) => (
                 <li key={item.label}>
                   <Link
                     href={item.href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="w-full block flex items-center gap-2 px-3 py-2 rounded transition-colors text-gray-600 dark:text-gray-500 hover:text-gray-900 dark:hover:text-gray-700 font-semibold hover:bg-gray-200 dark:hover:bg-gray-50"
+                    className="group w-full flex items-center gap-3 px-3 py-2 rounded-lg transition-colors text-muted-foreground hover:text-foreground font-medium hover:bg-foreground/5"
                   >
-                    <item.icon size={22} />
+                    <item.icon size={18} />
                     <span className="flex-1 text-left">{item.label}</span>
+                    <ArrowUpRight size={14} className="opacity-0 -translate-x-1 transition-all group-hover:opacity-100 group-hover:translate-x-0" />
                   </Link>
                 </li>
               ))}
@@ -161,8 +161,8 @@ export function Navigation() {
       </div>
 
       {/* Theme switcher */}
-      <div className="flex items-center justify-between border-t border-gray-200 dark:border-gray-700 pt-4">
-        <p className="text-sm font-semibold text-gray-600 dark:text-gray-400">Theme</p>
+      <div className="flex items-center justify-between border-t border-border pt-4 px-1">
+        <p className="font-mono text-[11px] uppercase tracking-[0.2em] text-muted-foreground">Theme</p>
         <ThemeToggle />
       </div>
     </aside>

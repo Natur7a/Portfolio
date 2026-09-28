@@ -17,37 +17,37 @@ function Details() {
     return (
         <div className="mt-6 sm:mt-10 w-full">
             {Study.map((study, index) => (
-                <div key={index} className="flex items-start mb-6"> {/* Changed to items-start */}
-                    <div className="flex">
-                        <div className="bg-gray-300 p-2 rounded-lg flex items-center justify-center">
-                            <GraduationCap 
-                                className="text-4xl text-black" 
-                                size={35}
-                            />
+                <div key={index} className="w-full rounded-xl border border-border bg-card/60 backdrop-blur-sm p-5 sm:p-8 mb-6">
+                    <div className="flex items-start gap-4 sm:gap-5">
+                        <div className="flex-shrink-0 rounded-xl bg-foreground text-background p-2.5 flex items-center justify-center">
+                            <GraduationCap size={28} strokeWidth={1.75} />
                         </div>
-                    </div>
-                    <div className="ml-4 flex flex-col flex-grow"> {/* Added flex-grow */}
-                        <div className="flex justify-between items-start"> {/* Added container for title and duration */}
-                            <div>
-                                <div className='text-neutral-900 dark:text-white text-lg sm:text-xl font-semibold'>
-                                    {study.University}
+                        <div className="flex flex-col flex-grow min-w-0">
+                            <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-2">
+                                <div>
+                                    <div className='text-lg sm:text-xl font-semibold tracking-tight'>
+                                        {study.University}
+                                    </div>
+                                    <div className='text-muted-foreground mt-1'>
+                                        {study.degree}
+                                    </div>
                                 </div>
-                                <div className='text-gray-500 dark:text-gray-400 mt-1'>
-                                    {study.degree}
-                                </div>
-                                <p className="text-gray-700 dark:text-gray-200 mt-5 text-base sm:text-lg">
+                                <p className="font-mono text-xs text-muted-foreground sm:pt-1.5 whitespace-nowrap">
                                     {study.duration}
                                 </p>
-                                <p className="text-gray-700 dark:text-gray-200 mt-2 text-base sm:text-lg">
-                                    GPA: {study.GPA}
-                                </p>
-                                <p className="text-gray-700 dark:text-gray-200 mt-2 text-base sm:text-lg">
-                                    {study.description}
-                                </p>
                             </div>
+                            <div className="mt-5 flex">
+                                <span className="inline-flex items-baseline gap-2 rounded-full border border-border px-3 py-1">
+                                    <span className="font-mono text-[10px] uppercase tracking-wider text-muted-foreground">GPA</span>
+                                    <span className="font-semibold">{study.GPA}</span>
+                                </span>
+                            </div>
+                            <p className="mt-5 text-base leading-relaxed text-muted-foreground">
+                                {study.description}
+                            </p>
                         </div>
                     </div>
-                </div>                
+                </div>
             ))}
         </div>
     )
